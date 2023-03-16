@@ -9,17 +9,13 @@ export default class Home extends Component {
       <div>
         <h3>Content about HOME!!!</h3>
         <div>
-          <ul >
-            <li className='style-inside'>
-              <NavLink to='news' children='news'>NEWS</NavLink>
-            </li>
-            <li className='style-inside'>
-              <NavLink to='message' children='message'>MESSAGE</NavLink>
-            </li>
-          </ul>
+        <nav id='style-inside'>
+          <NavLink to='news' children='news' className='style-inside'>NEWS</NavLink>
+          <NavLink to='message' children='message' className='style-inside'>MESSAGE</NavLink>
+        </nav>
           <Routes>
             <Route path='news' element={<News/> } />
-            <Route path='message' element={<Message/> } />
+            <Route path='message/*' element={<Message/> } />
           </Routes>
         </div>
       </div>      
