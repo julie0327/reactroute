@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import {NavLink,Route,Routes} from 'react-router-dom'
+import NewsItem from './newsItem';
 
 export default class News extends Component {
   render() {
@@ -7,15 +9,21 @@ export default class News extends Component {
         <div>
         <ul>
             <li>
-                <a href='/news1'>News001</a>
+                {/* <a href='/news1'>News001</a> */}
+                <NavLink to='news/1'>News001</NavLink>
             </li>   
             <li>
-                <a href='/news2'>News002</a>
+                {/* <a href='/news2'>News002</a> */}
+                <NavLink to='news/2'>News002</NavLink>
             </li>  
             <li>
-                <a href='/news3'>News003</a>
+                {/* <a href='/news3'>News003</a> */}
+                <NavLink to='news/3'>News003</NavLink>
             </li>  
         </ul>
+        <Routes>
+          <Route path='news/:id' element={<NewsItem/> } />
+        </Routes>
       </div>
       </div>
     )
