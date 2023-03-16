@@ -15,12 +15,12 @@ export default class Message extends Component {
       <div>
         <ul>
           {this.state.messageArr.map((mesObj) => {
-           
+            return (
               <li key={mesObj.id}>
                 {/* 向路由组件传递params参数 */}
-                <Link to={`/home/message/detail/${mesObj.id}/${mesObj.title}`}>{mesObj.title}</Link>
+                <Link to={`detail/${mesObj.id}/${mesObj.title}`}>{mesObj.title}</Link>
               </li>
-         
+            )
            })}
         </ul>
         <hr></hr>
