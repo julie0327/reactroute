@@ -14,7 +14,7 @@ export default class Home extends Component {
           <NavLink to='message' children='message' className='style-inside'>MESSAGE</NavLink>
         </nav>
           <Routes>
-            <Route path='news' element={<News/> } />
+            <Route path='news/*' element={<News/> } />
             <Route path='message/*' element={<Message/> } />
           </Routes>
         </div>

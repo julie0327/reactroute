@@ -3,8 +3,7 @@ import { useLocation } from 'react-router-dom'
 
 const NewsItem = () => {
     const location = useLocation();
-    return
-    <p>
+    return <p>
        { location.pathname }
     </p>
 };
